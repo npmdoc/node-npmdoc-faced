@@ -1,0 +1,1523 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a>faced (v1.2.0)</a>
+</h1>
+<h4>light-weight library for face recognition including features such as eyes, nose and mouth.</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.faced">module faced</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.faced.detector">
+            function <span class="apidocSignatureSpan">faced.</span>detector
+            <span class="apidocSignatureSpan">(cascades)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.faced.face">
+            function <span class="apidocSignatureSpan">faced.</span>face
+            <span class="apidocSignatureSpan">(attributes)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.faced.feature">
+            function <span class="apidocSignatureSpan">faced.</span>feature
+            <span class="apidocSignatureSpan">(attributes)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">faced.</span>detector.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">faced.</span>face.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">faced.</span>feature.prototype</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.faced.detector">module faced.detector</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.faced.detector.detector">
+            function <span class="apidocSignatureSpan">faced.</span>detector
+            <span class="apidocSignatureSpan">(cascades)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.faced.detector.prototype">module faced.detector.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.faced.detector.prototype.run">
+            function <span class="apidocSignatureSpan">faced.detector.prototype.</span>run
+            <span class="apidocSignatureSpan">(image, fn, context)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.faced.face">module faced.face</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.faced.face.face">
+            function <span class="apidocSignatureSpan">faced.</span>face
+            <span class="apidocSignatureSpan">(attributes)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.faced.face.prototype">module faced.face.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.faced.face.prototype.add">
+            function <span class="apidocSignatureSpan">faced.face.prototype.</span>add
+            <span class="apidocSignatureSpan">(name, feature)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.faced.face.prototype.constructor">
+            function <span class="apidocSignatureSpan">faced.face.prototype.</span>constructor
+            <span class="apidocSignatureSpan">(attributes)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.faced.face.prototype.getEyeLeft">
+            function <span class="apidocSignatureSpan">faced.face.prototype.</span>getEyeLeft
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.faced.face.prototype.getEyeRight">
+            function <span class="apidocSignatureSpan">faced.face.prototype.</span>getEyeRight
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.faced.face.prototype.getFeature">
+            function <span class="apidocSignatureSpan">faced.face.prototype.</span>getFeature
+            <span class="apidocSignatureSpan">(feature)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.faced.face.prototype.getFeatureCount">
+            function <span class="apidocSignatureSpan">faced.face.prototype.</span>getFeatureCount
+            <span class="apidocSignatureSpan">(feature)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.faced.face.prototype.getFeatures">
+            function <span class="apidocSignatureSpan">faced.face.prototype.</span>getFeatures
+            <span class="apidocSignatureSpan">(feature)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.faced.face.prototype.getMouth">
+            function <span class="apidocSignatureSpan">faced.face.prototype.</span>getMouth
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.faced.face.prototype.getNose">
+            function <span class="apidocSignatureSpan">faced.face.prototype.</span>getNose
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.faced.face.prototype.getNoseCenteredness">
+            function <span class="apidocSignatureSpan">faced.face.prototype.</span>getNoseCenteredness
+            <span class="apidocSignatureSpan">(nose)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.faced.face.prototype.isolateEyes">
+            function <span class="apidocSignatureSpan">faced.face.prototype.</span>isolateEyes
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.faced.face.prototype.isolateMouth">
+            function <span class="apidocSignatureSpan">faced.face.prototype.</span>isolateMouth
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.faced.face.prototype.isolateNose">
+            function <span class="apidocSignatureSpan">faced.face.prototype.</span>isolateNose
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.faced.face.prototype.normalize">
+            function <span class="apidocSignatureSpan">faced.face.prototype.</span>normalize
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.faced.face.prototype.remove">
+            function <span class="apidocSignatureSpan">faced.face.prototype.</span>remove
+            <span class="apidocSignatureSpan">(name, feature)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.faced.face.prototype.stripExternalFeatures">
+            function <span class="apidocSignatureSpan">faced.face.prototype.</span>stripExternalFeatures
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.faced.feature">module faced.feature</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.faced.feature.feature">
+            function <span class="apidocSignatureSpan">faced.</span>feature
+            <span class="apidocSignatureSpan">(attributes)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.faced.feature.prototype">module faced.feature.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.faced.feature.prototype.getHeight">
+            function <span class="apidocSignatureSpan">faced.feature.prototype.</span>getHeight
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.faced.feature.prototype.getWidth">
+            function <span class="apidocSignatureSpan">faced.feature.prototype.</span>getWidth
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.faced.feature.prototype.getX">
+            function <span class="apidocSignatureSpan">faced.feature.prototype.</span>getX
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.faced.feature.prototype.getX2">
+            function <span class="apidocSignatureSpan">faced.feature.prototype.</span>getX2
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.faced.feature.prototype.getY">
+            function <span class="apidocSignatureSpan">faced.feature.prototype.</span>getY
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.faced.feature.prototype.getY2">
+            function <span class="apidocSignatureSpan">faced.feature.prototype.</span>getY2
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.faced.feature.prototype.intersect">
+            function <span class="apidocSignatureSpan">faced.feature.prototype.</span>intersect
+            <span class="apidocSignatureSpan">(feature)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.faced" id="apidoc.module.faced">module faced</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.faced.detector" id="apidoc.element.faced.detector">
+        function <span class="apidocSignatureSpan">faced.</span>detector
+        <span class="apidocSignatureSpan">(cascades)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">detector = function (cascades) {
+    this.cascades = cascades;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.faced.face" id="apidoc.element.faced.face">
+        function <span class="apidocSignatureSpan">faced.</span>face
+        <span class="apidocSignatureSpan">(attributes)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Face(attributes) {
+    Feature.prototype.constructor.apply(this, arguments);
+
+    _.each(allowedFeatures, function (feature) {
+        this[feature] = [];
+    }, this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.faced.feature" id="apidoc.element.faced.feature">
+        function <span class="apidocSignatureSpan">faced.</span>feature
+        <span class="apidocSignatureSpan">(attributes)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Feature(attributes) {
+    if (attributes) {
+        this.x = attributes.x;
+        this.y = attributes.y;
+        this.width = attributes.width;
+        this.height = attributes.height;
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.faced.detector" id="apidoc.module.faced.detector">module faced.detector</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.faced.detector.detector" id="apidoc.element.faced.detector.detector">
+        function <span class="apidocSignatureSpan">faced.</span>detector
+        <span class="apidocSignatureSpan">(cascades)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">detector = function (cascades) {
+    this.cascades = cascades;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.faced.detector.prototype" id="apidoc.module.faced.detector.prototype">module faced.detector.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.faced.detector.prototype.run" id="apidoc.element.faced.detector.prototype.run">
+        function <span class="apidocSignatureSpan">faced.detector.prototype.</span>run
+        <span class="apidocSignatureSpan">(image, fn, context)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">run = function (image, fn, context) {
+    var detections = {},
+        complete;
+
+    complete = _.after(_.keys(this.cascades).length, function () {
+        fn.call(context, getFaces(detections), image);
+    });
+
+    _.each(this.cascades, function (cascade, element) {
+        cascade.detectMultiScale(image, function (error, objects) {
+            detections[element] = !error ? objects : [];
+            complete();
+        });
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.faced.face" id="apidoc.module.faced.face">module faced.face</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.faced.face.face" id="apidoc.element.faced.face.face">
+        function <span class="apidocSignatureSpan">faced.</span>face
+        <span class="apidocSignatureSpan">(attributes)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Face(attributes) {
+    Feature.prototype.constructor.apply(this, arguments);
+
+    _.each(allowedFeatures, function (feature) {
+        this[feature] = [];
+    }, this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.faced.face.prototype" id="apidoc.module.faced.face.prototype">module faced.face.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.faced.face.prototype.add" id="apidoc.element.faced.face.prototype.add">
+        function <span class="apidocSignatureSpan">faced.face.prototype.</span>add
+        <span class="apidocSignatureSpan">(name, feature)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">add = function (name, feature) {
+    if (feature instanceof Feature === false) {
+        throw new TypeError("feature is not class of Instance");
+    }
+
+    if (!_.contains(allowedFeatures, name)) {
+        throw new Error("feature name is not allowed: " + name);
+    }
+
+    this[name].push(feature);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+_.each(detections, function (detect, element) {
+    if (element === "face") {
+        return;
+    }
+
+    _.each(detect, function (properties) {
+        if (!outside(face, properties)) {
+            currentFace.<span class="apidocCodeKeywordSpan">add</span>(element, new Feature(properties));
+        }
+    });
+});
+
+currentFace.normalize();
+
+if (currentFace.getFeatureCount() &gt; 0) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.faced.face.prototype.constructor" id="apidoc.element.faced.face.prototype.constructor">
+        function <span class="apidocSignatureSpan">faced.face.prototype.</span>constructor
+        <span class="apidocSignatureSpan">(attributes)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Face(attributes) {
+    Feature.prototype.constructor.apply(this, arguments);
+
+    _.each(allowedFeatures, function (feature) {
+        this[feature] = [];
+    }, this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.faced.face.prototype.getEyeLeft" id="apidoc.element.faced.face.prototype.getEyeLeft">
+        function <span class="apidocSignatureSpan">faced.face.prototype.</span>getEyeLeft
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getEyeLeft = function () {
+    return this.getFeature("eyeRight");
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    face.getHeight()
+  );
+
+  console.log(
+    "What a pretty face, it %s a mouth, it %s a nose, it % a left eye and it %s a right eye!",
+    face.getMouth() ? "has" : "does not have",
+    face.getNose() ? "has" : "does not have",
+    face.<span class="apidocCodeKeywordSpan">getEyeLeft</span>() ? "has" : "does not have",
+    face.getEyeRight() ? "has" : "does not have"
+  );
+});
+```
+
+Its that simple! See the program used to [generate the above image](https://github.com/gordalina/faced/blob/master/examples/identify
+.js)
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.faced.face.prototype.getEyeRight" id="apidoc.element.faced.face.prototype.getEyeRight">
+        function <span class="apidocSignatureSpan">faced.face.prototype.</span>getEyeRight
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getEyeRight = function () {
+    return this.getFeature("eyeLeft");
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  );
+
+  console.log(
+    "What a pretty face, it %s a mouth, it %s a nose, it % a left eye and it %s a right eye!",
+    face.getMouth() ? "has" : "does not have",
+    face.getNose() ? "has" : "does not have",
+    face.getEyeLeft() ? "has" : "does not have",
+    face.<span class="apidocCodeKeywordSpan">getEyeRight</span>() ? "has" : "does not have"
+  );
+});
+```
+
+Its that simple! See the program used to [generate the above image](https://github.com/gordalina/faced/blob/master/examples/identify
+.js)
+
+## API
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.faced.face.prototype.getFeature" id="apidoc.element.faced.face.prototype.getFeature">
+        function <span class="apidocSignatureSpan">faced.face.prototype.</span>getFeature
+        <span class="apidocSignatureSpan">(feature)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getFeature = function (feature) {
+    if (_.contains(allowedFeatures, feature)) {
+        switch (this[feature].length) {
+        case 0:
+            return;
+
+        case 1:
+            return this[feature][0];
+
+        default:
+            return this[feature];
+        }
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ - `Face.getMouth()`
+ - `Face.getNose()`
+ - `Face.getEyeLeft()`
+ - `Face.getEyeRight()`
+
+Other significant methods
+
+ - `Face.<span class="apidocCodeKeywordSpan">getFeature</span>(name)` Returns a feature by name. Possible names are: `mouth`, `nose
+`, `eyeLeft` and `eyeRight`.
+ - `Face.getFeatures()` Returns an array of `Feature` that the instance has detected.
+ - `Face.getFeatureCount()` Returns the number of detected features.
+
+## Examples
+
+```bash
+$ node examples/identify.js images/lenna.png
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.faced.face.prototype.getFeatureCount" id="apidoc.element.faced.face.prototype.getFeatureCount">
+        function <span class="apidocSignatureSpan">faced.face.prototype.</span>getFeatureCount
+        <span class="apidocSignatureSpan">(feature)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getFeatureCount = function (feature) {
+    if (feature) {
+        return this.getFeatures(feature).length;
+    }
+
+    return _.filter(
+        _.map(allowedFeatures, function (feature) {
+            return this[feature].length;
+        }, this),
+        function (count) {
+            return count &gt; 0;
+        },
+        this
+    ).length;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ - `Face.getEyeLeft()`
+ - `Face.getEyeRight()`
+
+Other significant methods
+
+ - `Face.getFeature(name)` Returns a feature by name. Possible names are: `mouth`, `nose`, `eyeLeft` and `eyeRight`.
+ - `Face.getFeatures()` Returns an array of `Feature` that the instance has detected.
+ - `Face.<span class="apidocCodeKeywordSpan">getFeatureCount</span>()` Returns the number of detected features.
+
+## Examples
+
+```bash
+$ node examples/identify.js images/lenna.png
+```
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.faced.face.prototype.getFeatures" id="apidoc.element.faced.face.prototype.getFeatures">
+        function <span class="apidocSignatureSpan">faced.face.prototype.</span>getFeatures
+        <span class="apidocSignatureSpan">(feature)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getFeatures = function (feature) {
+    var features = {};
+
+    if (feature &amp;&amp; _.contains(allowedFeatures, feature)) {
+        return this[feature];
+    }
+
+    _.each(allowedFeatures, function (feature) {
+        features[feature] = this[feature];
+    }, this);
+
+    return features;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ - `Face.getNose()`
+ - `Face.getEyeLeft()`
+ - `Face.getEyeRight()`
+
+Other significant methods
+
+ - `Face.getFeature(name)` Returns a feature by name. Possible names are: `mouth`, `nose`, `eyeLeft` and `eyeRight`.
+ - `Face.<span class="apidocCodeKeywordSpan">getFeatures</span>()` Returns an array of `Feature` that the instance has detected.
+ - `Face.getFeatureCount()` Returns the number of detected features.
+
+## Examples
+
+```bash
+$ node examples/identify.js images/lenna.png
+```
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.faced.face.prototype.getMouth" id="apidoc.element.faced.face.prototype.getMouth">
+        function <span class="apidocSignatureSpan">faced.face.prototype.</span>getMouth
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getMouth = function () {
+    return this.getFeature("mouth");
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    face.getY(),
+    face.getWidth(),
+    face.getHeight()
+  );
+
+  console.log(
+    "What a pretty face, it %s a mouth, it %s a nose, it % a left eye and it %s a right eye!",
+    face.<span class="apidocCodeKeywordSpan">getMouth</span>() ? "has" : "does not have",
+    face.getNose() ? "has" : "does not have",
+    face.getEyeLeft() ? "has" : "does not have",
+    face.getEyeRight() ? "has" : "does not have"
+  );
+});
+```
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.faced.face.prototype.getNose" id="apidoc.element.faced.face.prototype.getNose">
+        function <span class="apidocSignatureSpan">faced.face.prototype.</span>getNose
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getNose = function () {
+    return this.getFeature("nose");
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    face.getWidth(),
+    face.getHeight()
+  );
+
+  console.log(
+    "What a pretty face, it %s a mouth, it %s a nose, it % a left eye and it %s a right eye!",
+    face.getMouth() ? "has" : "does not have",
+    face.<span class="apidocCodeKeywordSpan">getNose</span>() ? "has" : "does not have",
+    face.getEyeLeft() ? "has" : "does not have",
+    face.getEyeRight() ? "has" : "does not have"
+  );
+});
+```
+
+Its that simple! See the program used to [generate the above image](https://github.com/gordalina/faced/blob/master/examples/identify
+.js)
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.faced.face.prototype.getNoseCenteredness" id="apidoc.element.faced.face.prototype.getNoseCenteredness">
+        function <span class="apidocSignatureSpan">faced.face.prototype.</span>getNoseCenteredness
+        <span class="apidocSignatureSpan">(nose)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getNoseCenteredness = function (nose) {
+    var mouth = this.getMouth(),
+        horizontal,
+        vertical;
+
+    if (!mouth) {
+        return 0;
+    }
+
+    horizontal = (
+        (nose.getX() - this.getX())
+        +
+        (nose.getWidth() / 2)
+    ) / this.getWidth();
+
+    vertical = (
+        (nose.getY() - this.getY())
+        +
+        (nose.getHeight() / 2)
+    ) / this.getHeight();
+
+    return Math.abs(
+        ((horizontal + vertical) / 2) - 0.5
+    );
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var toRemove;
+
+if (!bestNose) {
+    bestNose = nose;
+    return;
+}
+
+if (this.<span class="apidocCodeKeywordSpan">getNoseCenteredness</span>(nose) &lt; this.getNoseCenteredness(bestNose)) {
+    toRemove = bestNose;
+    bestNose = nose;
+} else {
+    toRemove = nose;
+}
+
+if (toRemove) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.faced.face.prototype.isolateEyes" id="apidoc.element.faced.face.prototype.isolateEyes">
+        function <span class="apidocSignatureSpan">faced.face.prototype.</span>isolateEyes
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isolateEyes = function () {
+    var eyes,
+        maximumY = this.getY() + Math.abs(this.getHeight() / 2),
+        minimumXforRightEye,
+        maximumXforLeftEye;
+
+    // first lets discard all the eyes that do no start
+    // on the upper half of the face
+
+    _.each(this.getFeatures("eyeLeft"), function (eye) {
+        if (eye.getY() &gt; maximumY) {
+            this.remove("eyeLeft", eye);
+        }
+    }, this);
+
+    _.each(this.getFeatures("eyeRight"), function (eye) {
+        if (eye.getY() &gt; maximumY) {
+            this.remove("eyeRight", eye);
+        }
+    }, this);
+
+    // jackpot!
+    if (this.getFeatures("eyeLeft").length === 1 &amp;&amp;
+            this.getFeatures("eyeRight").length === 1) {
+        return;
+    }
+
+    eyes = [ 'eyeLeft', 'eyeRight' ];
+
+    // Lets remove all eyes that are within each other
+    _.each(eyes, function (eyeName, idx) {
+        _.each(this.getFeatures(eyeName), function (eye) {
+            var subEyeName = eyes[idx ? 0 : 1];
+
+            _.each(this.getFeatures(subEyeName), function (subEye) {
+                if (eye === subEye) {
+                    return;
+                }
+
+                if (eye.intersect(subEye)) {
+                    this.remove(subEyeName, subEye);
+                }
+            }, this);
+        }, this);
+    }, this);
+
+    // If we have a pair of the same eye and none of the other
+    // set one of them as the other eye
+    _.each(eyes, function (eyeName, idx) {
+        var eyeFeatures, otherEyeFeatures,
+            otherEyeName = eyes[idx ? 0 : 1];
+
+        eyeFeatures = this.getFeatures(eyeName);
+        otherEyeFeatures = this.getFeatures(otherEyeName);
+
+        if (eyeFeatures.length === 2 &amp;&amp; otherEyeFeatures.length === 0) {
+            eyeFeatures = this.getFeatures(eyeName);
+
+
+            if (eyeFeatures[0].getX() &gt; eyeFeatures[1].getX()) {
+                this.remove(eyeName, eyeFeatures[0]);
+                this.add(otherEyeName, eyeFeatures[0]);
+            } else {
+                this.remove(eyeName, eyeFeatures[1]);
+                this.add(otherEyeName, eyeFeatures[1]);
+            }
+        }
+    }, this);
+
+    // jackpot!
+    if (this.getFeatures("eyeLeft").length === 1 &amp;&amp;
+            this.getFeatures("eyeRight").length === 1) {
+        return;
+    }
+
+    // Lets remove right-side eyes from the left side
+    minimumXforRightEye = this.getX() + Math.abs(this.getWidth() * 0.33);
+
+    _.each(this.getFeatures("eyeRight"), function (eye) {
+        if (eye.getX() &lt; minimumXforRightEye) {
+            this.remove("eyeRight", eye);
+        }
+    }, this);
+
+    // Lets remove right-side eyes from the left side
+    maximumXforLeftEye = this.getX() + Math.abs(this.getWidth() * 0.66);
+
+    _.each(this.getFeatures("eyeLeft"), function (eye) {
+        if (eye.getX2() &gt; maximumXforLeftEye) {
+            this.remove("eyeLeft", eye);
+        }
+    }, this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+if (!this.getFeatureCount()) {
+    return;
+}
+
+this.isolateMouth();
+this.isolateNose();
+this.<span class="apidocCodeKeywordSpan">isolateEyes</span>();
+};
+
+Face.prototype.stripExternalFeatures = function () {
+_.each(this.getFeatures(), function (features, name) {
+    _.each(features, function (feature) {
+        if (this.intersect(feature) &lt; 1) {
+            this.remove(name, feature);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.faced.face.prototype.isolateMouth" id="apidoc.element.faced.face.prototype.isolateMouth">
+        function <span class="apidocSignatureSpan">faced.face.prototype.</span>isolateMouth
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isolateMouth = function () {
+    var bestMouth;
+
+    _.each(this.getFeatures("mouth"), function (mouth) {
+        var toRemove;
+
+        if (!bestMouth) {
+            bestMouth = mouth;
+            return;
+        }
+
+        if (mouth.getY() &gt; bestMouth.getY()) {
+            toRemove = bestMouth;
+            bestMouth = mouth;
+        } else {
+            toRemove = mouth;
+        }
+
+        if (toRemove) {
+            this.remove("mouth", toRemove);
+        }
+    }, this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+Face.prototype.normalize = function () {
+this.stripExternalFeatures();
+
+if (!this.getFeatureCount()) {
+    return;
+}
+
+this.<span class="apidocCodeKeywordSpan">isolateMouth</span>();
+this.isolateNose();
+this.isolateEyes();
+};
+
+Face.prototype.stripExternalFeatures = function () {
+_.each(this.getFeatures(), function (features, name) {
+    _.each(features, function (feature) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.faced.face.prototype.isolateNose" id="apidoc.element.faced.face.prototype.isolateNose">
+        function <span class="apidocSignatureSpan">faced.face.prototype.</span>isolateNose
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isolateNose = function () {
+    var mouth = this.getMouth(),
+        bestNose;
+
+    // if we have a mouth lets remove all the noses that do not intersect it
+    if (mouth) {
+        _.each(this.getFeatures("nose"), function (nose) {
+            if (nose.intersect(mouth) === 0) {
+                this.remove("nose", nose);
+            }
+        }, this);
+    }
+
+    if (this.getFeatures("nose").length &lt;= 1) {
+        return;
+    }
+
+    // we have more than one nose, lets select the most centrally-aligned one
+    _.each(this.getFeatures("nose"), function (nose) {
+        var toRemove;
+
+        if (!bestNose) {
+            bestNose = nose;
+            return;
+        }
+
+        if (this.getNoseCenteredness(nose) &lt; this.getNoseCenteredness(bestNose)) {
+            toRemove = bestNose;
+            bestNose = nose;
+        } else {
+            toRemove = nose;
+        }
+
+        if (toRemove) {
+            this.remove("nose", nose);
+        }
+    }, this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+this.stripExternalFeatures();
+
+if (!this.getFeatureCount()) {
+    return;
+}
+
+this.isolateMouth();
+this.<span class="apidocCodeKeywordSpan">isolateNose</span>();
+this.isolateEyes();
+};
+
+Face.prototype.stripExternalFeatures = function () {
+_.each(this.getFeatures(), function (features, name) {
+    _.each(features, function (feature) {
+        if (this.intersect(feature) &lt; 1) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.faced.face.prototype.normalize" id="apidoc.element.faced.face.prototype.normalize">
+        function <span class="apidocSignatureSpan">faced.face.prototype.</span>normalize
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">normalize = function () {
+    this.stripExternalFeatures();
+
+    if (!this.getFeatureCount()) {
+        return;
+    }
+
+    this.isolateMouth();
+    this.isolateNose();
+    this.isolateEyes();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+        _.each(detect, function (properties) {
+            if (!outside(face, properties)) {
+                currentFace.add(element, new Feature(properties));
+            }
+        });
+    });
+
+    currentFace.<span class="apidocCodeKeywordSpan">normalize</span>();
+
+    if (currentFace.getFeatureCount() &gt; 0) {
+        faces.push(currentFace);
+    }
+});
+
+return faces;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.faced.face.prototype.remove" id="apidoc.element.faced.face.prototype.remove">
+        function <span class="apidocSignatureSpan">faced.face.prototype.</span>remove
+        <span class="apidocSignatureSpan">(name, feature)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">remove = function (name, feature) {
+    this[name] = _.difference(this[name], [feature]);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+this.isolateEyes();
+};
+
+Face.prototype.stripExternalFeatures = function () {
+_.each(this.getFeatures(), function (features, name) {
+    _.each(features, function (feature) {
+        if (this.intersect(feature) &lt; 1) {
+            this.<span class="apidocCodeKeywordSpan">remove</span>(name, feature);
+        }
+    }, this);
+}, this);
+};
+
+Face.prototype.isolateMouth = function () {
+var bestMouth;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.faced.face.prototype.stripExternalFeatures" id="apidoc.element.faced.face.prototype.stripExternalFeatures">
+        function <span class="apidocSignatureSpan">faced.face.prototype.</span>stripExternalFeatures
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">stripExternalFeatures = function () {
+    _.each(this.getFeatures(), function (features, name) {
+        _.each(features, function (feature) {
+            if (this.intersect(feature) &lt; 1) {
+                this.remove(name, feature);
+            }
+        }, this);
+    }, this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+return Math.abs(
+    ((horizontal + vertical) / 2) - 0.5
+);
+};
+
+Face.prototype.normalize = function () {
+this.<span class="apidocCodeKeywordSpan">stripExternalFeatures</span>();
+
+if (!this.getFeatureCount()) {
+    return;
+}
+
+this.isolateMouth();
+this.isolateNose();
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.faced.feature" id="apidoc.module.faced.feature">module faced.feature</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.faced.feature.feature" id="apidoc.element.faced.feature.feature">
+        function <span class="apidocSignatureSpan">faced.</span>feature
+        <span class="apidocSignatureSpan">(attributes)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Feature(attributes) {
+    if (attributes) {
+        this.x = attributes.x;
+        this.y = attributes.y;
+        this.width = attributes.width;
+        this.height = attributes.height;
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.faced.feature.prototype" id="apidoc.module.faced.feature.prototype">module faced.feature.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.faced.feature.prototype.getHeight" id="apidoc.element.faced.feature.prototype.getHeight">
+        function <span class="apidocSignatureSpan">faced.feature.prototype.</span>getHeight
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getHeight = function () {
+    return this.height;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var face = faces[0];
+
+console.log(
+  "Found a face at %d,%d with dimensions %dx%d",
+  face.getX(),
+  face.getY(),
+  face.getWidth(),
+  face.<span class="apidocCodeKeywordSpan">getHeight</span>()
+);
+
+console.log(
+  "What a pretty face, it %s a mouth, it %s a nose, it % a left eye and it %s a right eye!",
+  face.getMouth() ? "has" : "does not have",
+  face.getNose() ? "has" : "does not have",
+  face.getEyeLeft() ? "has" : "does not have",
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.faced.feature.prototype.getWidth" id="apidoc.element.faced.feature.prototype.getWidth">
+        function <span class="apidocSignatureSpan">faced.feature.prototype.</span>getWidth
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getWidth = function () {
+    return this.width;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+var face = faces[0];
+
+console.log(
+  "Found a face at %d,%d with dimensions %dx%d",
+  face.getX(),
+  face.getY(),
+  face.<span class="apidocCodeKeywordSpan">getWidth</span>(),
+  face.getHeight()
+);
+
+console.log(
+  "What a pretty face, it %s a mouth, it %s a nose, it % a left eye and it %s a right eye!",
+  face.getMouth() ? "has" : "does not have",
+  face.getNose() ? "has" : "does not have",
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.faced.feature.prototype.getX" id="apidoc.element.faced.feature.prototype.getX">
+        function <span class="apidocSignatureSpan">faced.feature.prototype.</span>getX
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getX = function () {
+    return this.x;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  return console.log("No faces found!");
+}
+
+var face = faces[0];
+
+console.log(
+  "Found a face at %d,%d with dimensions %dx%d",
+  face.<span class="apidocCodeKeywordSpan">getX</span>(),
+  face.getY(),
+  face.getWidth(),
+  face.getHeight()
+);
+
+console.log(
+  "What a pretty face, it %s a mouth, it %s a nose, it % a left eye and it %s a right eye!",
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.faced.feature.prototype.getX2" id="apidoc.element.faced.feature.prototype.getX2">
+        function <span class="apidocSignatureSpan">faced.feature.prototype.</span>getX2
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getX2 = function () {
+    return this.getX() + this.getWidth();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+The callback function expects a prototype like `function (faces, image, file) { }`, where the first is an array of `Face`, the second
+ is a `Matrix` [object from opencv](https://npmjs.org/package/opencv#readme) and the third is the path of the image.
+
+In case of error the arguments `faces` and `image` will be `undefined`.
+
+### Class `Feature`
+ - `Feature.getX()` Returns the upper left corner X position of the face
+ - `Feature.getY()` Returns the upper left corner Y position of the face
+ - `Feature.<span class="apidocCodeKeywordSpan">getX2</span>()` Returns the lower right corner X position of the face
+ - `Feature.getY2()` Returns the lower right conrner Y position of the face
+ - `Feature.getWidth()` Returns the width
+ - `Feature.getHeight()` Returns the height
+ - `Feature.intersect(Feature)` Returns the percentage of shared spaced that the current feature has with the given argument Feature
+. *Although this is used internally it might be useful for client usage.*
+
+### Class `Face` (extends `Feature`)
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.faced.feature.prototype.getY" id="apidoc.element.faced.feature.prototype.getY">
+        function <span class="apidocSignatureSpan">faced.feature.prototype.</span>getY
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getY = function () {
+    return this.y;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+}
+
+var face = faces[0];
+
+console.log(
+  "Found a face at %d,%d with dimensions %dx%d",
+  face.getX(),
+  face.<span class="apidocCodeKeywordSpan">getY</span>(),
+  face.getWidth(),
+  face.getHeight()
+);
+
+console.log(
+  "What a pretty face, it %s a mouth, it %s a nose, it % a left eye and it %s a right eye!",
+  face.getMouth() ? "has" : "does not have",
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.faced.feature.prototype.getY2" id="apidoc.element.faced.feature.prototype.getY2">
+        function <span class="apidocSignatureSpan">faced.feature.prototype.</span>getY2
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getY2 = function () {
+    return this.getY() + this.getHeight();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+In case of error the arguments `faces` and `image` will be `undefined`.
+
+### Class `Feature`
+ - `Feature.getX()` Returns the upper left corner X position of the face
+ - `Feature.getY()` Returns the upper left corner Y position of the face
+ - `Feature.getX2()` Returns the lower right corner X position of the face
+ - `Feature.<span class="apidocCodeKeywordSpan">getY2</span>()` Returns the lower right conrner Y position of the face
+ - `Feature.getWidth()` Returns the width
+ - `Feature.getHeight()` Returns the height
+ - `Feature.intersect(Feature)` Returns the percentage of shared spaced that the current feature has with the given argument Feature
+. *Although this is used internally it might be useful for client usage.*
+
+### Class `Face` (extends `Feature`)
+
+All of the following method1s return an instance of `Feture` or `undefined` if it could not detect.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.faced.feature.prototype.intersect" id="apidoc.element.faced.feature.prototype.intersect">
+        function <span class="apidocSignatureSpan">faced.feature.prototype.</span>intersect
+        <span class="apidocSignatureSpan">(feature)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">intersect = function (feature) {
+    var excessHeightTop,
+        excessHeightBottom,
+        excessWidthLeft,
+        excessWidthRight,
+        excessHeight,
+        excessWidth,
+        excess;
+
+    // test for intersection
+    if ((
+            this.getX2() &lt; feature.getX() ||
+            this.getX() &gt; feature.getX2() ||
+            this.getY2() &lt; feature.getY() ||
+            this.getY() &gt; feature.getY2()
+        )) {
+        return 0;
+    }
+
+    excessHeightTop = (this.getY() - feature.getY());
+    excessHeightBottom = (feature.getY2() - this.getY2());
+    excessWidthLeft = (this.getX() - feature.getX());
+    excessWidthRight = (feature.getX2() - this.getX2());
+
+    excessHeight = (
+        (excessHeightTop &gt; 0 ? excessHeightTop : 0)
+        +
+        (excessHeightBottom &gt; 0 ? excessHeightBottom : 0)
+    );
+
+    excessWidth = (
+        (excessWidthLeft &gt; 0 ? excessWidthLeft : 0)
+        +
+        (excessWidthRight &gt; 0 ? excessWidthRight : 0)
+    );
+
+    excess = (
+        excessHeight * feature.getWidth()
+        +
+        excessWidth * feature.getHeight()
+    );
+
+    return 1 - (excess / (feature.getWidth() * feature.getHeight()));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+### Class `Feature`
+- `Feature.getX()` Returns the upper left corner X position of the face
+- `Feature.getY()` Returns the upper left corner Y position of the face
+- `Feature.getX2()` Returns the lower right corner X position of the face
+- `Feature.getY2()` Returns the lower right conrner Y position of the face
+- `Feature.getWidth()` Returns the width
+- `Feature.getHeight()` Returns the height
+- `Feature.<span class="apidocCodeKeywordSpan">intersect</span>(Feature)` Returns the percentage of shared spaced that the current
+ feature has with the given argument Feature. *Although this is used internally it might be useful for client usage.*
+
+### Class `Face` (extends `Feature`)
+
+All of the following method1s return an instance of `Feture` or `undefined` if it could not detect.
+
+- `Face.getMouth()`
+- `Face.getNose()`
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
