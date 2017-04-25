@@ -481,7 +481,23 @@
         });
     });
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    size = img.size();
+
+    if (size[0] === 0 || size[1] === 0) {
+        return fn.call(context, undefined, undefined, path);
+    }
+
+    detector = new Detector(this.cascades);
+    detector.<span class="apidocCodeKeywordSpan">run</span>(img, function (faces) {
+        fn.call(context, faces, img, path);
+    });
+}, this));
+};
+
+Faced.prototype.destroy = function () {
+delete this.cascades;
+...</pre></li>
     </ul>
 
 
