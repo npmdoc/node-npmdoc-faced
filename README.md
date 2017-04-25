@@ -1,6 +1,6 @@
 # npmdoc-faced
 
-#### api documentation for  faced (v1.2.0)  [![npm package](https://img.shields.io/npm/v/npmdoc-faced.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-faced) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-faced.svg)](https://travis-ci.org/npmdoc/node-npmdoc-faced)
+#### basic api documentation for  faced (v1.2.0)  [![npm package](https://img.shields.io/npm/v/npmdoc-faced.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-faced) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-faced.svg)](https://travis-ci.org/npmdoc/node-npmdoc-faced)
 
 #### light-weight library for face recognition including features such as eyes, nose and mouth.
 
